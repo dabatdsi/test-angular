@@ -13,6 +13,45 @@
         </div>
       </nav>
 
+
+      <table class="table table-success table-striped">
+        <thead>
+          <tr>
+            <th scope="col">idEmployes</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">adress</th>
+            <th scope="col">email</th>
+            <th scope="col">cin</th>
+            <th scope="col">phoneNumber</th>
+            <th scope="col">posteOccupe</th>
+            <td>   </td> <td>  </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of empList">
+            <!--<th scope="row">1</th>-->
+            <td>{{employee.idEmployes}</td>
+            <td>{{employee.firstName}}</td>
+            <td>{{employee.lastName}}</td>
+            <td>{{employee.adress}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.cin}}</td>
+            <td>{{employee.phoneNumber}}</td>
+            <td>{{employee.posteOccupe}}</td>
+      
+            <td> </td>
+            <td>
+    
+                <button type="button" class="btn btn-outline-primary me-2" data-bs-target="#editEmployee" (click)= "editEmployee(employee)"> Edit </button>
+                <button type="button" class="btn btn-outline-danger" > Delete </button> 
+                
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+
   <!--  add employes Modal -->
   <div class="modal fade" id="addEmployes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -72,53 +111,66 @@
     </div>
   </div>
 
-<!-- edite Employee 
+<!-- edite Employee  -->
 <div class="modal fade" id="editEmployee" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">Edit employes detail </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <form [formGroup] ="empDetail" >
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">FirstName </label>
+            <input type="text" formContolName="firstName" class="form-control" id="firstName" aria-describedby="emailHelp">
+           
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">LastName </label>
+            <input type="text" formContolName="lastName" class="form-control" id="lastName" aria-describedby="emailHelp">
+           
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Adresse </label>
+            <input type="text"  formContolName="adress" class="form-control" id="adress" aria-describedby="emailHelp">
+           
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email </label>
+            <input type="email" formContolName="email" class="form-control" id="mail1" aria-describedby="emailHelp">
+           
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputCni" class="form-label">CNI </label>
+            <input type="text" formContolName="cni" class="form-control" id="cni" aria-describedby="emailHelp">
+           
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPhoneNumber" class="form-label">PhoneNumber</label>
+            <input type="text"  formContolName="phoneNumber"class="form-control" id="phoneNumber">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Poste Occupe </label>
+            <input type="text" formContolName="posteOccupe"class="form-control" id="posteOccupe" aria-describedby="emailHelp">
+           
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline-success" > Update </button>
+          </div>
+        </form>
+
+
+       
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
+      
+
     </div>
   </div>
-</div>   -->
+</div>  
  
-  <table class="table table-success table-striped">
-    <thead>
-      <tr>
-        <th scope="col">idEmployes</th>
-        <th scope="col">FirstName</th>
-        <th scope="col">LastName</th>
-        <th scope="col">adress</th>
-        <th scope="col">email</th>
-        <th scope="col">cin</th>
-        <th scope="col">phoneNumber</th>
-        <th scope="col">posteOccupe</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>
-
-            <button type="button" class="btn btn-outline-primary me-2" data-bs-target="#editEmployee"> Edit </button>
-            <button type="button" class="btn btn-outline-danger"> Delete </button>
-         
-        </td>
-      </tr>
-      
-    </tbody>
-  </table>
+  
 
 </div>

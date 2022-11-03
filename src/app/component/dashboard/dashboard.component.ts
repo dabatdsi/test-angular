@@ -20,6 +20,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.getAllEmployes();
     this.empDetail = this.formBuilder.group({
+      idEmployee:[''],
       frirtName :[''],
       lastName :[''],
       adress :[''],
@@ -31,6 +32,7 @@ export class DashboardComponent implements OnInit {
     });
     
   }
+  
   addEmployee(){
     console.log(this.empDetail);
     this.empObj.idEmployes =this.empDetail.value.idEmployes;
@@ -62,4 +64,20 @@ export class DashboardComponent implements OnInit {
 
 
      }
-}
+     editEmployee(emp : Employes){
+      this.empDetail.controls['idEmployes'].setValue(emp.idEmployes);
+      this.empDetail.controls['firstName'].setValue(emp.firstName);
+      this.empDetail.controls['lastName'].setValue(emp.lastName);
+      this.empDetail.controls['adress'].setValue(emp.adress);
+      this.empDetail.controls['email'].setValue(emp.email);
+      this.empDetail.controls['cni'].setValue(emp.cin);
+      this.empDetail.controls['phoneNumber'].setValue(emp.phoneNumber);
+      this.empDetail.controls['posteOccupe'].setValue(emp.posteOccupe);
+
+     }
+      
+     
+
+     
+    }
+

@@ -10,6 +10,7 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
 export class EmployesService {
   addEmpURL : string;
   getEmpURL : string;
+  editEmpURL: string;
 
  
 
@@ -17,6 +18,7 @@ export class EmployesService {
 
     this.addEmpURL = 'http://localhost:8082/emp/addEmployee';
     this.getEmpURL = 'http://localhost:8082/emp/getAll';
+    this.editEmpURL = 'http://localhost:8082/emp/editEmployee';
    }
 
    addEmployee( emp : Employes):Observable<Employes>{
@@ -25,5 +27,8 @@ export class EmployesService {
    getAllEmployes(): Observable<Employes[]>{
     return this.http.get<Employes[]>(this.getEmpURL);
 
+   }
+    editEmployee( emp : Employes):Observable<Employes>{
+    return this.http.post<Employes>(this.addEmpURL,emp);
    }
 }

@@ -33,7 +33,7 @@ export class DashboardComponent implements OnInit {
     
   }
   
-  addEmployee(){
+  addEmployes(){
     console.log(this.empDetail);
     this.empObj.idEmployes =this.empDetail.value.idEmployes;
     this.empObj.firstName =this.empDetail.value.firstName;
@@ -44,7 +44,7 @@ export class DashboardComponent implements OnInit {
     this.empObj.phoneNumber =this.empDetail.value.phoneNumber;
     this.empObj.posteOccupe =this.empDetail.value.posteOccupe;
 
-   this.empService.addEmployee(this.empObj).subscribe(res =>{
+   this.empService.addEmployes(this.empObj).subscribe(res =>{
       console.log(res);
       this.getAllEmployes();
     }, err=>{
@@ -64,7 +64,7 @@ export class DashboardComponent implements OnInit {
 
 
      }
-     editEmployee(emp : Employes){
+     editEmployes(emp : Employes){
       this.empDetail.controls['idEmployes'].setValue(emp.idEmployes);
       this.empDetail.controls['firstName'].setValue(emp.firstName);
       this.empDetail.controls['lastName'].setValue(emp.lastName);
@@ -75,7 +75,17 @@ export class DashboardComponent implements OnInit {
       this.empDetail.controls['posteOccupe'].setValue(emp.posteOccupe);
 
      }
-      
+     updateEmploye(){
+      this.empObj.idEmployes =this.empDetail.value.idEmployes;
+      this.empObj.firstName =this.empDetail.value.firstName;
+      this.empObj.lastName =this.empDetail.value.lastName;
+      this.empObj.adress =this.empDetail.value.adress;
+      this.empObj.email =this.empDetail.value.email;
+      this.empObj.cin =this.empDetail.value.cni;
+      this.empObj.phoneNumber =this.empDetail.value.phoneNumber;
+      this.empObj.posteOccupe =this.empDetail.value.posteOccupe;
+     }
+
      
 
      

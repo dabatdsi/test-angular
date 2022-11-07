@@ -10,25 +10,25 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
 export class EmployesService {
   addEmpURL : string;
   getEmpURL : string;
-  editEmpURL: string;
+  updateEmpURL: string;
 
  
 
   constructor( private http : HttpClient) {
 
-    this.addEmpURL = 'http://localhost:8082/emp/addEmployee';
+    this.addEmpURL = 'http://localhost:8082/emp/addEmployes';
     this.getEmpURL = 'http://localhost:8082/emp/getAll';
-    this.editEmpURL = 'http://localhost:8082/emp/editEmployee';
+    this.updateEmpURL = 'http://localhost:8082/emp/updateEmployee';
    }
 
-   addEmployee( emp : Employes):Observable<Employes>{
+   addEmployes( emp : Employes):Observable<Employes>{
     return this.http.post<Employes>(this.addEmpURL,emp);
    }
    getAllEmployes(): Observable<Employes[]>{
     return this.http.get<Employes[]>(this.getEmpURL);
 
    }
-    editEmployee( emp : Employes):Observable<Employes>{
-    return this.http.post<Employes>(this.addEmpURL,emp);
+    updateEmployes( emp : Employes):Observable<Employes>{
+    return this.http.put<Employes>(this.updateEmpURL,emp);
    }
 }

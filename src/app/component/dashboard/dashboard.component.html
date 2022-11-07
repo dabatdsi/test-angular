@@ -29,21 +29,21 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let employee of empList">
+          <tr *ngFor="let employes of empList">
             <!--<th scope="row">1</th>-->
-            <td>{{employee.idEmployes}</td>
-            <td>{{employee.firstName}}</td>
-            <td>{{employee.lastName}}</td>
-            <td>{{employee.adress}}</td>
-            <td>{{employee.email}}</td>
-            <td>{{employee.cin}}</td>
-            <td>{{employee.phoneNumber}}</td>
-            <td>{{employee.posteOccupe}}</td>
+            <td>{{employes.idEmployes}</td>
+            <td>{{employes.firstName}}</td>
+            <td>{{employes.lastName}}</td>
+            <td>{{employes.adress}}</td>
+            <td>{{employes.email}}</td>
+            <td>{{employes.cin}}</td>
+            <td>{{employes.phoneNumber}}</td>
+            <td>{{employes.posteOccupe}}</td>
       
             <td> </td>
             <td>
     
-                <button type="button" class="btn btn-outline-primary me-2" data-bs-target="#editEmployee" (click)= "editEmployee(employee)"> Edit </button>
+                <button type="button" class="btn btn-outline-primary me-2" data-bs-target="#editEmployee" (click)= "editEmployes(employes)"> Edit </button>
                 <button type="button" class="btn btn-outline-danger" > Delete </button> 
                 
             </td>
@@ -111,7 +111,7 @@
     </div>
   </div>
 
-<!-- edite Employee  -->
+<!--edite Employee-- >
 <div class="modal fade" id="editEmployee" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -158,7 +158,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-outline-success" > Update </button>
+            <button type="button" class="btn btn-outline-success "(click)="updateEmployee()" > Update </button>
           </div>
         </form>
 

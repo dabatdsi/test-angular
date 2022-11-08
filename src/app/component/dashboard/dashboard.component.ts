@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit {
   }
   
   addEmployes(){
-    console.log(this.empDetail);
+    console.log(this.empDetail.value);
     this.empObj.idEmployes =this.empDetail.value.idEmployes;
     this.empObj.firstName =this.empDetail.value.firstName;
     this.empObj.lastName =this.empDetail.value.lastName;
@@ -43,6 +43,7 @@ export class DashboardComponent implements OnInit {
     this.empObj.cin =this.empDetail.value.cni;
     this.empObj.phoneNumber =this.empDetail.value.phoneNumber;
     this.empObj.posteOccupe =this.empDetail.value.posteOccupe;
+  
 
    this.empService.addEmployes(this.empObj).subscribe(res =>{
       console.log(res);
@@ -62,8 +63,8 @@ export class DashboardComponent implements OnInit {
 
       });
 
-
      }
+
      editEmployes(emp : Employes){
       this.empDetail.controls['idEmployes'].setValue(emp.idEmployes);
       this.empDetail.controls['firstName'].setValue(emp.firstName);
@@ -85,9 +86,6 @@ export class DashboardComponent implements OnInit {
       this.empObj.phoneNumber =this.empDetail.value.phoneNumber;
       this.empObj.posteOccupe =this.empDetail.value.posteOccupe;
      }
-
-     
-
      
     }
 

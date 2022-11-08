@@ -14,7 +14,7 @@ export class EmployesService {
 
   constructor( private http : HttpClient) {
 
-    this.employeUrl = 'http://localhost:8082/emp/employes';
+    this.employeUrl = 'http://localhost:8082/api/employes';
    }
 
    addEmployes( emp : Employes):Observable<Employes>{

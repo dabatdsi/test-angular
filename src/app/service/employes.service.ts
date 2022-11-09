@@ -31,7 +31,7 @@ export class EmployesService {
    
    
 
-    updateEmployes( emp : Employes):Observable<Employes>{
+   /*  updateEmployes( emp : Employes):Observable<Employes>{
     return this.httpClient.put<Employes>(this.employesUrl,emp);
-   }
+   } */
 }

@@ -9,8 +9,8 @@ import { EmployesService } from 'src/app/service/employes.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  /* empDetail !:FormGroup;
-  empObj : Employes = new Employes(); */
+  // empDetail !:FormGroup;
+  // empObj : Employes = new Employes();
   empList : Employes [] = [] ;
  
 
@@ -41,7 +41,7 @@ export class DashboardComponent implements OnInit {
 
     }); */
     
-  // }
+  }
   
   /* addEmployes(){
     console.log(this.empDetail.value);
@@ -63,8 +63,8 @@ export class DashboardComponent implements OnInit {
 
     });
 
-  }
-     getAllEmployes(){
+  } */
+     /* getAllEmployes(){
       this.empService.getAllEmployes().subscribe(res=>{
         this.empList=res;
 
@@ -73,9 +73,9 @@ export class DashboardComponent implements OnInit {
 
       });
 
-     } */
+     }
 
-    /*  editEmployes(emp : Employes){
+     editEmployes(emp : Employes){
       this.empDetail.controls['idEmployes'].setValue(emp.idEmployes);
       this.empDetail.controls['firstName'].setValue(emp.firstName);
       this.empDetail.controls['lastName'].setValue(emp.lastName);
@@ -96,6 +96,6 @@ export class DashboardComponent implements OnInit {
       this.empObj.phoneNumber =this.empDetail.value.phoneNumber;
       this.empObj.postOccupe =this.empDetail.value.postOccupe;
      }
-     */
-    } 
+      */
+    
 

@@ -11,7 +11,8 @@ import { EmployesService } from './service/employes.service';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    
   ],
   imports: [
     BrowserModule,

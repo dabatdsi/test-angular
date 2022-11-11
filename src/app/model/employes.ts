@@ -1,7 +1,7 @@
 export class Employes {
     [x: string]: any;
 
-    idEmployes: number =0;
+    idEmployes: number =1;
     firstName: string='';
     lastName: string='';
     adress: string=''; 

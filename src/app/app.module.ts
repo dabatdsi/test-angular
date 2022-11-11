@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployesListComponent } from './component/employesList/employesList.component';
 import { EmployesService } from './service/employes.service';
-import { CreateEmployesComponent } from './create-employes/create-employes.component';
+import { CreateEmployesComponent } from './component/create-employes/create-employes.component';
+import { UpdateEmployesComponent } from './component/update-employes/update-employes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployesListComponent,
     CreateEmployesComponent,
+    UpdateEmployesComponent,
     
   ],
   imports: [

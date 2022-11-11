@@ -16,9 +16,9 @@
             <th scope="col">phoneNumber</th>
             <th scope="col">postOccupe</th>
             <th scope="col" >  Action </th>
-
             <td>   </td> <td>  </td>
           </tr>
+
         </thead>
         <tbody>
           <tr *ngFor="let employes of empList">
@@ -30,8 +30,10 @@
             <td>{{employes.cni}}</td>
             <td>{{employes.phoneNumber}}</td>
             <td>{{employes.postOccupe}}</td>
-            <td> </td>  <td> </td> <td></td>
-            
+            <td> </td>  <td> </td>  
+            <td> 
+              <button (click)="updateEmployes(employes.idEmployes)" class ="btn btn-infos"> Update</button>
+            </td>
           </tr>
         </tbody>
       </table>

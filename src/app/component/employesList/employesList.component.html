@@ -1,0 +1,39 @@
+ 
+      <!-- <button class="btn btn-primary mt-3" (click)="getEmployes()">All Employes</button>
+      <button class="btn btn-primary mt-3 ms-2" (click)="getEmployes()">Ajouter</button> -->
+
+<h1 class="text-center"> liste des employes</h1>
+ 
+      <table class="table table-success table-striped">
+        <thead>
+          <tr>
+            <th scope="col">idEmployes</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">adress</th>
+            <th scope="col">email</th>
+            <th scope="col">cni</th>
+            <th scope="col">phoneNumber</th>
+            <th scope="col">postOccupe</th>
+            <th scope="col" >  Action </th>
+
+            <td>   </td> <td>  </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employes of empList">
+            <td>{{employes.idEmployes}}</td>
+            <td>{{employes.firstName}}</td>
+            <td>{{employes.lastName}}</td>
+            <td>{{employes.adress}}</td>
+            <td>{{employes.email}}</td>
+            <td>{{employes.cni}}</td>
+            <td>{{employes.phoneNumber}}</td>
+            <td>{{employes.postOccupe}}</td>
+            <td> </td>  <td> </td> <td></td>
+            
+          </tr>
+        </tbody>
+      </table>
+
+  

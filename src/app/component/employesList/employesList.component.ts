@@ -4,13 +4,12 @@ import { Employes } from 'src/app/model/employes';
 import { EmployesService } from 'src/app/service/employes.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-employesList',
+  templateUrl: './employesList.component.html',
+  styleUrls: ['./employesList.component.css']
 })
-export class DashboardComponent implements OnInit {
-  // empDetail !:FormGroup;
-  // empObj : Employes = new Employes();
+export class EmployesListComponent implements OnInit {
+
   empList : Employes [] = [] ;
  
 
@@ -20,7 +19,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.getEmployes();
   }
-  private getEmployes(){
+   getEmployes(){
     this.empService.getAllEmployes().subscribe(data =>{
       this.empList=data;
 
@@ -64,16 +63,9 @@ export class DashboardComponent implements OnInit {
     });
 
   } */
-     /* getAllEmployes(){
-      this.empService.getAllEmployes().subscribe(res=>{
-        this.empList=res;
+     
 
-      },err=>{
-        console.log("erreur lors de la lecture des données");
-
-      });
-
-     }
+   /*
 
      editEmployes(emp : Employes){
       this.empDetail.controls['idEmployes'].setValue(emp.idEmployes);

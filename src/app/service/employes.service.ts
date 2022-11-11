@@ -22,8 +22,8 @@ export class EmployesService {
 
    }
 
-   addEmployes( emp : Employes):Observable<Employes>{
-    return this.httpClient.post<Employes>(this.employesUrl.concat('/save'),emp);
+   createEmployes( employes : Employes):Observable<Object>{
+    return this.httpClient.post<Employes>(this.employesUrl.concat('/save'),employes);
    }
    /* editEmployes( emp : Employes):Observable<Employes>{
     return this.http.post<Employes>(this.employeUrl.concat('/update/{id}'),emp);

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'test   crud avec angular  et spring boot ';
+  title = 'Gestion des Employes ';
 }

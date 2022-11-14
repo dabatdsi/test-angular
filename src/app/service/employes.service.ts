@@ -31,10 +31,10 @@ export class EmployesService {
     updateEmployes(id: number,employes: Employes):Observable<Object>{
     return this.httpClient.put<Employes>(this.employesUrl.concat('/update/',`${id}`),employes);
    } 
+   deleteEmployes(id: number):Observable<Object>{
+    return this.httpClient.delete(this.employesUrl.concat('/',`${id}`));
+   }
    
    
 
-   /*  updateEmployes( emp : Employes):Observable<Employes>{
-    return this.httpClient.put<Employes>(this.employesUrl,emp);
-   } */
 }

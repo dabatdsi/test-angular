@@ -8,6 +8,7 @@ import { EmployesListComponent } from './component/employesList/employesList.com
 import { EmployesService } from './service/employes.service';
 import { CreateEmployesComponent } from './component/create-employes/create-employes.component';
 import { UpdateEmployesComponent } from './component/update-employes/update-employes.component';
+import { EmployesDetailsComponent } from './component/employes-details/employes-details.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { UpdateEmployesComponent } from './component/update-employes/update-empl
     EmployesListComponent,
     CreateEmployesComponent,
     UpdateEmployesComponent,
+    EmployesDetailsComponent,
     
   ],
   imports: [

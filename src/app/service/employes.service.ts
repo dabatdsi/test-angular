@@ -9,10 +9,12 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
 })
 export class EmployesService {
   employesUrl : string;
+  
 
   constructor( private httpClient : HttpClient) {
 
     this.employesUrl = 'http://localhost:8082/api/employes';
+   
    }
 
    getAllEmployes(): Observable<Employes[]>{

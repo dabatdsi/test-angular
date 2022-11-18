@@ -9,6 +9,10 @@ import { EmployesService } from './service/employes.service';
 import { CreateEmployesComponent } from './component/create-employes/create-employes.component';
 import { UpdateEmployesComponent } from './component/update-employes/update-employes.component';
 import { EmployesDetailsComponent } from './component/employes-details/employes-details.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
+ 
 
 @NgModule({
   declarations: [
@@ -17,6 +21,12 @@ import { EmployesDetailsComponent } from './component/employes-details/employes-
     CreateEmployesComponent,
     UpdateEmployesComponent,
     EmployesDetailsComponent,
+    LoginComponent,
+    RegistrationComponent,
+    LoginsuccessComponent,
+  
+   
+   
     
   ],
   imports: [

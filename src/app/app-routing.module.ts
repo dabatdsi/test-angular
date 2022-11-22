@@ -6,6 +6,8 @@ import { CreateEmployesComponent } from './component/create-employes/create-empl
 import { EmployesDetailsComponent } from './component/employes-details/employes-details.component';
 import { LoginComponent } from './login/login.component';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
+import { RegistrationComponent } from './registration/registration.component';
+
 
 const routes: Routes = [
   { path:'employes', component: EmployesListComponent },
@@ -14,7 +16,10 @@ const routes: Routes = [
   {path: 'update-employes/:id', component: UpdateEmployesComponent},
   {path: 'employes-details/:id', component: EmployesDetailsComponent},
   {path: '' ,component:LoginComponent},
-  {path: 'loginsuccess' ,component:LoginsuccessComponent}
+  {path: 'loginsuccess' ,component:LoginsuccessComponent},
+  {path: 'registration' , component:RegistrationComponent},
+  {path: 'login',component:LoginComponent}
+  
 
   
 

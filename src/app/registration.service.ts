@@ -14,7 +14,11 @@ export class RegistrationService {
 
   }
   public loginUsersFormsRemote(users: Users): Observable<any>{
-    return this.http.post<any>(this.loginUrl.concat('/login'),users);
-  
+    return this.http.post<any>(this.loginUrl.concat('/login'),users); 
 }
+
+public registerUsersFormsRemote(users: Users): Observable<any>{
+  return this.http.post<any>(this.loginUrl.concat('/register'),users); 
+}
+
 }

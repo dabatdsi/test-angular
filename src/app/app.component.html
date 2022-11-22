@@ -1,5 +1,4 @@
-
- <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <ul class="navbar-nav">
         <li class="nav-item">
             <a  routerLink = "/employes" routerLinkActive="active" class="nav-link  btn-success me-4"> Employes List</a>
@@ -7,24 +6,21 @@
         <li class="nav-item">
             <a  routerLink = "create-employes" routerLinkActive="active" class="nav-link btn-success ">  AddEmployes</a>
         </li>
-
+  
     </ul>
-</nav> 
+  </nav> 
 
-<div class="container">
-    <div  class="jumbotron text-center">
-     <h1> {{title}}</h1> 
+    <div class="container">
+        <div  class="jumbotron text-center">
+         <h1> {{title}}</h1> 
     </div>
+
    <router-outlet> </router-outlet > 
     <!-- <app-login> </app-login>   -->
     <!--<app-root> </app-root>  -->
-  
-</div>
 
-<footer class="footer">
-    <div class="container">
-        <span> 2022@monsoko</span>
-
-    </div>
-
-</footer>
+    <!-- <footer class="footer">
+        <div class="container">
+            <span> 2022@monsoko</span>
+        </div>
+    </footer> -->

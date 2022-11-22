@@ -27,6 +27,7 @@ incorrect=false; */
     this.service.loginUsersFormsRemote(this.users).subscribe(
       data =>{console.log("reponse recu");
       this.router.navigate(['/loginsuccess']);
+      
     },
       error=>{
         console.log("execption accorder");
@@ -34,12 +35,9 @@ incorrect=false; */
 
     })
 
-    /* if(this.email=='rokhaya@gmail.com' && this.password=='passer')
-    this.router.navigate(['/employes'])
-    else{
-        this.incorrect=true;
-        return ;
-    } */
+    }
+    gotoregistration(){
+      this.router.navigate(["/registration"]);
     }
       
 

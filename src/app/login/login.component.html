@@ -1,16 +1,15 @@
-<h5> page de connexion</h5>
-<div class="container" class="col-md-6 offset md-3">
+<h5> User Login </h5>
+ <div class="container" class="col-md-6 offset md-3">  
   <!-- <h3 class="text-center text-danger" *ngIf="incorrect"> email et/ou mot de passe incorrect</h3> -->
 
   <form #loginform= "ngForm"(ngSubmit)= "loginUsers()"> 
-    <!-- {{loginform.form.valid}}  -->
-    <small class= "text-danger" > {{ msg}}</small>
+    <!-- {{loginform.form.valid}}   -->
+    <small class= "text-danger" > {{msg}}</small>
 
     <div class="form-group">
       <label for="email">Email address:</label>
       <input type="email" class="form-control" placeholder="Enter email"  name="email" [(ngModel)]= "users.email" required #email="ngModel"
-      [class.is-invalid]= "email.invalid && email.touched">
-
+      [class.is-invalid]= "email.invalid && email.touched"> 
       <div *ngIf= "email.errors && (email.invalid && email.touched)">
         <small class="text-danger" > l'adress email est un champ obligatoire ,  </small>
         <small class="text-danger">  veillez entrer une adresse email valide </small>
@@ -28,6 +27,12 @@
         <input class="form-check-input" type="checkbox"> Remember me
       </label>
     </div>
-    <button   [disabled] = "loginform.form.invalid" type="submit" class="btn btn-info"> Login </button>
+    <div>
+      <button [disabled] = "loginform.form.invalid" type="submit" class="btn btn-info"> Login </button>
+     <small  class= "position-absolute"  style="left: 400px" [routerLink]= "['/registration']"> new  User | register here</small> 
+  </div>
   </form>
+  <!-- <small class="float-right" (click)= "gotoregistration()"> new  User | register here</small> -->
+ 
+
 </div>

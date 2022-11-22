@@ -12,6 +12,7 @@ import { EmployesDetailsComponent } from './component/employes-details/employes-
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
+
  
 
 @NgModule({
@@ -24,6 +25,7 @@ import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
     LoginComponent,
     RegistrationComponent,
     LoginsuccessComponent,
+   
   
    
    

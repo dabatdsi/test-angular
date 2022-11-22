@@ -1,1 +1,98 @@
-<p>registration works!</p>
+<div class="contaire">
+  <!-- <style="max-width: 600px;background-color: white;"></style> -->
+  <h5 class="textual"> User registration </h5>
+
+  <form #Registerform="ngForm" (ngSubmit)="registerUsers()">
+    <small class="text-danger">{{msg}}</small>
+    <div class="row mb-3">
+    <div class="col-4">
+      <div class="form-group">
+        <label for="email"> First Name</label>
+        <input type="firtsName" class="form-control" placeholder="Enter firtsName" name="firtsName"
+          [(ngModel)]="users.firstName" required #firstName="ngModel"
+          [class.is-invalid]="firstName.invalid && firstName.touched">
+        <div *ngIf="firstName.errors && (firstName.invalid && firstName.touched)">
+          <small class="text-danger" *ngIf="firstName.errors['required']"> le firstName est un champ obligatoire
+          </small>
+          <small class="text-danger" *ngIf="firstName.errors['patterns']"> veillez entrer un nom valide </small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email"> Last Name</label>
+        <input type="lastName" class="form-control" placeholder="Enter lastName" name="lastName"
+          [(ngModel)]="users.lastName" required #lastName="ngModel"
+          [class.is-invalid]="lastName.invalid && lastName.touched">
+        <div *ngIf="lastName.errors && (firstName.invalid && firstName.touched)">
+          <small class="text-danger" *ngIf="lastName.errors['required']"> le lastName est un champ obligatoire </small>
+          <small class="text-danger" *ngIf="lastName.errors['patterns']"> veillez entrer un prenom valide </small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email"> adress</label>
+        <input type="adressName" class="form-control" placeholder="Enter Adress" name="adress"
+          [(ngModel)]="users.adress" required #adress="ngModel" [class.is-invalid]="adress.invalid && adress.touched">
+        <div *ngIf="adress.errors && (adress.invalid && adress.touched)">
+          <small class="text-danger" *ngIf="adress.errors['required']"> l'adress est un champ obligatoire </small>
+          <small class="text-danger" *ngIf="adress.errors['patterns']"> veillez entrer une adress valide </small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber"> phoneNumber </label>
+        <input type="number" class="form-control" placeholder="Enter phoneNumber" name="phoneNumber"
+          [(ngModel)]="users.phoneNumber" required #phoneNumber="ngModel"
+          [class.is-invalid]="phoneNumber.invalid && phoneNumber.touched">
+        <small class="text-danger" [class.d.none]="phoneNumber.invalid ||phoneNumber.untouched"> le numero de telephone
+          est un champ obligatoire </small>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="users.email"
+          required #email="ngModel" [class.is-invalid]="email.invalid && email.touched">
+        <div *ngIf="email.errors && (email.invalid && email.touched)">
+          <small class="text-danger" *ngIf="email.errors['required']"> l'adress email est un champ obligatoire </small>
+          <small class="text-danger" *ngIf="email.errors['patterns']"> veillez entrer une adresse email valide </small>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-4" style="margin-left: 100px; ">
+      
+
+      <div class="form-group">
+        <label for="username"> User Name</label>
+        <input type="text" class="form-control" placeholder="Enter username" name="username"
+          [(ngModel)]="users.username" required #username="ngModel"
+          [class.is-invalid]="username.invalid && username.touched">
+        <small class="text-danger" [class.d.none]="username.invalid || username.untouched"> le noms d'utilisateur est un
+          champ obligatoire </small>
+      </div>
+
+      <div class="form-group">
+        <label for="pwd"> Password </label>
+        <input type="password" class="form-control" placeholder="Enter password" name="password"
+          [(ngModel)]="users.password" required #password="ngModel"
+          [class.is-invalid]="password.invalid && password.touched">
+        <small class="text-danger" [class.d.none]="password.invalid || password.untouched"> le password est un champ
+          obligatoire </small>
+      </div>
+
+      <div class="form-group">
+        <label for="pwd"> Confire password </label>
+        <input type="password" class="form-control" placeholder="Enter confire password" name="cpassword"
+          [(ngModel)]="users.cpassword" required #cpassword="ngModel"
+          [class.is-invalid]="cpassword.invalid && cpassword.touched">
+        <small class="text-danger" [class.d.none]="(cpassword.value == cpassword.value) || cpassword.untouched "> le
+          password et le confire password doivent etre identique </small> <br><br>
+      </div>
+      <div>
+        <button [disabled]="Registerform.form.invalid" type="submit" class="btn btn-info"> Register </button>
+        <small class="float-right btextual" [routerLink]="['/login']"> existing User | login here </small>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>

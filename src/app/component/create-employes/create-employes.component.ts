@@ -27,6 +27,7 @@ export class CreateEmployesComponent implements OnInit {
   /// redirection vers la liste des employes
   goToEmployesList(){
     this.router.navigate(['/employes']);
+   
 
   }
 

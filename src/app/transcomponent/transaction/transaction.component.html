@@ -1,0 +1,38 @@
+
+<h1 class="text-center"> liste des transactions</h1>
+ 
+<table class="table table-success table-striped col-12S">
+  <thead>
+    <tr>
+      <th scope="col">idTrans</th>
+      <th scope="col">DatePayment</th>
+      <th scope="col">StatusPay</th>
+      <th scope="col">StatusTrans</th>
+      <th scope="col">Description </th>
+      <th scope="col"> Montant</th>
+      <th scope="col">Employes</th>
+      <th scope="col"> Action </th>
+
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of transList">
+      <td>{{transaction.idTrans}}</td>
+      <td>{{transaction.datePayment}}</td>
+      <td>{{transaction.statusPay}}</td>
+      <td>{{transaction.statusType}}</td>
+      <td>{{transaction.description}}</td>
+      <td>{{transaction.montant}}</td>
+      <td>{{transaction.employes.lastName}} {{transaction.employes.firstName}}</td>
+      <td>
+        <div class="btn-group-lg">
+          <button (click)="transDetails(transaction.idTrans)" class =" btn-sm  btn-infos btn-primary me-2"> View </button>
+          <button (click)="newTransaction(transaction.idTrans)" class ="btn-sm btn-infos btn-primary me-2"> new_Trans</button> 
+        </div> 
+      </td>
+    
+    </tr>
+  </tbody>
+</table>
+

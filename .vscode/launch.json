@@ -5,6 +5,17 @@
     
 
     {
+      "name": "Attach to Chrome",
+      "port": 9222,
+      "request": "attach",
+      "type": "chrome",
+      "webRoot": "${workspaceFolder}"
+    },
+
+
+    
+
+    {
       "name": "ng serve",
       "type": "pwa-chrome",
       "request": "launch",

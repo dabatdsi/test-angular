@@ -1,0 +1,36 @@
+<h3> View transaction Details </h3>
+
+<div>
+    <div>
+      <label> <b> datePayment: </b> </label> {{transaction.datePayment}}
+    </div>
+    <div>
+        <label> <b> StatusPay : </b> </label> {{transaction.statusPay}}
+      </div>
+      <div>
+        <label> <b> StatusType : </b> </label> {{transaction.statusType}}
+      </div>
+      <div>
+        <label> <b> Description: </b> </label> {{transaction.description}}
+      </div>
+      <div>
+        <label> <b> Montant: </b> </label> {{transaction.montant}}
+      </div>
+      <div>
+        <label> <b> Employes : </b> </label> 
+        {{transaction.employes.firstName}}
+
+        {{transaction.employes.lastName}}
+
+        {{transaction.employes.adress}}
+
+        {{transaction.employes.email}}
+
+        {{transaction.employes.phoneNumber}}
+        
+        {{transaction.employes.postOccupe}}
+      
+      </div>
+     
+</div>
+

@@ -9,11 +9,24 @@ import { EmployesService } from './service/employes.service';
 import { CreateEmployesComponent } from './component/create-employes/create-employes.component';
 import { UpdateEmployesComponent } from './component/update-employes/update-employes.component';
 import { EmployesDetailsComponent } from './component/employes-details/employes-details.component';
-import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
+import { NewTransactionComponent } from './transcomponent/new-transaction/new-transaction.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
+import { CommonModule } from '@angular/common';
+import { HeaderComponent } from './header/header.component';
+import { TransDetailsComponent } from './transcomponent/trans-details/trans-details.component';
+import { TransactionComponent } from './transcomponent/transaction/transaction.component';
+
+
+
+
 
  
+
+
+ 
+
+
 
 @NgModule({
   declarations: [
@@ -22,22 +35,32 @@ import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
     CreateEmployesComponent,
     UpdateEmployesComponent,
     EmployesDetailsComponent,
-    LoginComponent,
-    RegistrationComponent,
-    LoginsuccessComponent,
-   
+    NewTransactionComponent,
+    FooterComponent,
+    HeaderComponent,
+    TransDetailsComponent,
+    TransactionComponent,
+
   
    
-   
+    
+    
+    
     
   ],
+
   imports: [
+    RouterModule,
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule,   
     ReactiveFormsModule ,
-    HttpClientModule
+    HttpClientModule,
+    
+ 
   ],
+
   providers: [EmployesService],
   bootstrap: [AppComponent]
 })

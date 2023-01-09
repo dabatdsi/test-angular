@@ -1,0 +1,49 @@
+<div class="col-md-6 offset md-3">
+    <h3> new Transaction </h3>
+    <form (ngSubmit) = "onSubmit()">
+      <div class="form-group">
+          <label> DatePayment</label>
+          <input type="datetime" class="form-control" id ="datePayment" 
+          [(ngModel)] = "transaction.datePayment" name ="datePayment">
+  
+      </div>
+      <div class="form-group">
+          <label> StatusPay </label>
+          <input type="text" class="form-control" id ="statusPay" 
+          [(ngModel)] = "transaction.statusPay" name ="statusPay">
+  
+       </div>
+      <div class="form-group">
+        
+         <label> StatusType </label>
+          <input type="text" class="form-control" id ="statusType"
+          [(ngModel)] = "transaction.statusType" name ="statusType">
+   
+       </div>
+       <div class="form-group">
+          <label> Description</label>
+          <input type="text" class="form-control" id ="description"
+          [(ngModel)] = "transaction.description" name ="description">
+        </div>
+        <div class="form-group">
+            <label> Montant</label>
+            <input type="number" class="form-control" id ="montant"
+            [(ngModel)] = "transaction.montant" name ="montant">
+          </div>
+
+      <div class="form-group">
+          <!-- <label> Employes </label>
+          <select name="pets" id="pet-select">
+          <option value="">listes des employes inscrits</option>
+          <option value="transaction.fullName"></option>    
+      </select> -->
+         <input type="text" class="form-control" id ="employes"
+          [(ngModel)] = "transaction.employes.idEmployes"  name ="employes"> 
+      </div>
+  
+      <button class = "btn btn-success  mt-2" type = "submit"  >  Submit </button>
+  
+   </form>
+  
+  </div>
+  

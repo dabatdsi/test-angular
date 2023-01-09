@@ -4,20 +4,24 @@ import { Employes } from '../model/employes';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class EmployesService {
   employesUrl : string;
   
+  
 
   constructor( private httpClient : HttpClient) {
 
     this.employesUrl = 'http://localhost:8082/api/employes';
-   
+    
+  
    }
 
-   getAllEmployes(): Observable<Employes[]>{
+    getAllEmployes(): Observable<Employes[]>{
+    
     return this.httpClient.get<Employes[]>(this.employesUrl.concat('/all'));
 
    }
@@ -25,7 +29,8 @@ export class EmployesService {
    createEmployes( employes : Employes):Observable<Object>{
     return this.httpClient.post<Employes>(this.employesUrl.concat('/save'),employes);
    }
-   getEmployesById(id: number): Observable<Employes>{
+
+   getEmployesById(id: number): Observable<Employes>{ 
     return this.httpClient.get<Employes>(this.employesUrl.concat('/',`${id}`));
 
 
@@ -33,9 +38,9 @@ export class EmployesService {
     updateEmployes(id: number,employes: Employes):Observable<Object>{
     return this.httpClient.put<Employes>(this.employesUrl.concat('/update/',`${id}`),employes);
    } 
-   deleteEmployes(id: number):Observable<Object>{
+   deleteEmployes(id: number):Observable<Object>{ 
     return this.httpClient.delete(this.employesUrl.concat('/',`${id}`));
-   }
+   } 
    
    
 

@@ -1,5 +1,6 @@
+<div class="container">
 <div class="col-md-6 offset md-3">
-    <h3> new Transaction </h3>
+    <h3> nouvelle  Transaction </h3>
     <form (ngSubmit) = "onSubmit()">
       <div class="form-group">
           <label> DatePayment</label>
@@ -8,9 +9,9 @@
   
       </div>
       <div class="form-group">
-          <label> StatusPay </label>
+          <label> Moyen_Payment </label>
           <select class="form-control" (change)="onChangePay($event)">
-            <option value= ''> payBy </option>
+            <option value= ''> payer_par </option>
              <option *ngFor="let item of payBy | keyvalue " value="{{item.value}}">{{item.value}}</option> 
           </select> 
 
@@ -20,9 +21,9 @@
        </div>
       <div class="form-group">
         
-         <label> StatusType </label>
+         <label> Type </label>
          <select class="form-control" (change)="onChangeStatus($event)">
-          <option value= ''> choiceTrans </option>
+          <option value= ''> choix_Trans </option>
            <option *ngFor="let item of typeTrans | keyvalue " value="{{item.value}}">{{item.value}}</option> 
         </select> 
           <!-- <input type="text" class="form-control" id ="statusType"
@@ -51,9 +52,11 @@
           [(ngModel)] = "transaction.employes.idEmployes"  name ="employes">  --> 
       </div>
   
-      <button class = "btn btn-success  mt-2" type= "submit">  Submit </button>
+      <button class = "btn btn-success  mt-2" type= "submit">  Soumettre </button>
   
    </form>
   
   </div>
+
+</div>
   

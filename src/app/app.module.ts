@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { TransDetailsComponent } from './transcomponent/trans-details/trans-details.component';
 import { TransactionComponent } from './transcomponent/transaction/transaction.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -40,6 +41,7 @@ import { TransactionComponent } from './transcomponent/transaction/transaction.c
     HeaderComponent,
     TransDetailsComponent,
     TransactionComponent,
+    HomeComponent,
    
 
   

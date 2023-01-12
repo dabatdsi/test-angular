@@ -1,16 +1,16 @@
-
+<app-header></app-header>
 <h1 class="text-center"> liste des employes</h1>
  
       <table class="table table-success table-striped col-12S">
         <thead>
           <tr>
-            <th scope="col">idEmployes</th>
-            <th scope="col">FirstName</th>
-            <th scope="col">LastName</th>
+            <th scope="col">num_Emp</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
             <th scope="col">adress</th>
             <th scope="col">email</th>
-            <th scope="col">cni</th>
-            <th scope="col">phoneNumber</th>
+            <th scope="col">num_identite</th>
+            <th scope="col">Num_telephone</th>
             <th scope="col">postOccupe</th>
             <th scope="col" >  Action </th>
   
@@ -18,8 +18,8 @@
 
         </thead>
         <tbody>
-          <tr *ngFor="let employes of empList">
-            <td>{{employes.idEmployes}}</td>
+          <tr *ngFor="let employes of empList let i=index">
+            <td>{{i+1}}</td>
             <td>{{employes.firstName}}</td>
             <td>{{employes.lastName}}</td>
             <td>{{employes.adress}}</td>
@@ -29,9 +29,9 @@
             <td>{{employes.postOccupe}}</td>
             <td>
             <div class="btn-group btn-group-lg">
-              <button (click)="updateEmployes(employes.idEmployes)" class ="btn-sm btn-infos btn-primary  me-2"> Update</button>
-              <button (click)="deleteEmployes(employes.idEmployes)" class =" btn-sm btn-danger btn-infos me-2"> Delete</button>
-              <button (click)="employesDetail(employes.idEmployes)" class =" btn-sm  btn-infos btn-primary me-2"> View </button>
+              <button (click)="updateEmployes(employes.idEmployes)" class ="btn-sm btn-infos btn-primary  me-2"> Modifier</button>
+              <button (click)="deleteEmployes(employes.idEmployes)" class =" btn-sm btn-danger btn-infos me-2"> Supprimer</button>
+              <button (click)="employesDetail(employes.idEmployes)" class =" btn-sm  btn-infos btn-primary me-2"> Details </button>
             </div>
          </td>
           </tr>

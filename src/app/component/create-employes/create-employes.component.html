@@ -1,15 +1,15 @@
 <div class="container">
     <div class="col-md-6 offset md-3">
-        <h3> create Employes </h3>
+        <h3> ajout  Employes </h3>
         <form (ngSubmit) = "onSubmit()">
           <div class="form-group">
-              <label> FirstName </label>
+              <label> Nom </label>
               <input type="text" class="form-control" id ="firstName" 
               [(ngModel)] = "employes.firstName" name ="firstName">
       
           </div>
           <div class="form-group">
-              <label> LastName </label>
+              <label> Prenom </label>
               <input type="text" class="form-control" id ="lastName" 
               [(ngModel)] = "employes.lastName" name ="lastName">
       
@@ -27,13 +27,13 @@
       
           </div>
           <div class="form-group">
-              <label> CNI </label>
+              <label> Num_identite </label>
               <input type="text" class="form-control" id ="cni"
               [(ngModel)] = "employes.cni" name ="cni">
           </div>
           
           <div class="form-group">
-              <label> PhoneNumber </label>
+              <label> Num_telephone </label>
               <input type="text" class="form-control" id = "phoneNumber" 
               [(ngModel)] = "employes.phoneNumber" name ="phoneNumber">
           </div>
@@ -44,7 +44,7 @@
               [(ngModel)] = "employes.postOccupe" name ="postOccupe">
           </div>
       
-          <button class = "btn btn-success  mt-2" type = "submit">  Submit </button>
+          <button class = "btn btn-success  mt-2" type = "submit">  Soumettre </button>
       
        </form>
       

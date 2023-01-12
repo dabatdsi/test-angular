@@ -12,21 +12,22 @@ import { AppComponent } from './app.component';
 //import { RegistrationComponent } from './registration/registration.component';
 import { HeaderComponent } from './header/header.component';
 import { TransDetailsComponent } from './transcomponent/trans-details/trans-details.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  {path:'',component:AppComponent},
+  //{path:'',component:EmployesListComponent},
+  {path:'',component:HomeComponent},
+  {path:'home',component:HomeComponent},
   { path:'employes', component: EmployesListComponent },
   {path:'create-employes',component: CreateEmployesComponent},
   {path: '',redirectTo:'employesList',pathMatch:'full'},
   //{path : 'login',component:LoginComponent},
   {path: 'update-employes/:id', component: UpdateEmployesComponent},
   {path: 'employes-details/:id', component: EmployesDetailsComponent},
-  //{path: '' ,component:LoginComponent},
   {path:'transaction',component:TransactionComponent},
   {path:'new-transaction',component:NewTransactionComponent},
   {path: 'footer',component:FooterComponent},
-  //{path:'registration',component:RegistrationComponent},
   {path:'header',component:HeaderComponent},
   {path:'employesList',component:EmployesListComponent},
   {path:'trans-details/:id',component:TransDetailsComponent},

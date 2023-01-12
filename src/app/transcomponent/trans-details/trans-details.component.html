@@ -1,5 +1,5 @@
+<div class="container">
 <h3> View transaction Details </h3>
-
 <div>
     <div>
       <label> <b> datePayment: </b> </label> {{transaction.datePayment}}
@@ -30,7 +30,10 @@
         
         {{transaction.employes.postOccupe}}
       
-      </div>
-     
-</div>
+      </div> 
+      <div> 
+        <button (click)="retourTrans(transaction.idTrans)" class ="btn-sm btn-infos btn-primary me-4"> retour </button> 
+      </div> 
+  </div>
+</div> 
 

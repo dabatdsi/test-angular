@@ -1,4 +1,5 @@
 export enum TypeTrans {
-    payment,
-    decaissement
+payment='payment',
+decaissement='decaissement',
+
 }

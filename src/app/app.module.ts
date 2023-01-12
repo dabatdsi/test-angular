@@ -40,6 +40,7 @@ import { TransactionComponent } from './transcomponent/transaction/transaction.c
     HeaderComponent,
     TransDetailsComponent,
     TransactionComponent,
+   
 
   
    

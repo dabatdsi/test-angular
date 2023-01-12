@@ -9,15 +9,24 @@
       </div>
       <div class="form-group">
           <label> StatusPay </label>
-          <input type="text" class="form-control" id ="statusPay" 
-          [(ngModel)] = "transaction.statusPay" name ="statusPay">
+          <select class="form-control" (change)="onChangePay($event)">
+            <option value= ''> payBy </option>
+             <option *ngFor="let item of payBy | keyvalue " value="{{item.value}}">{{item.value}}</option> 
+          </select> 
+
+         <!-- <input type="text" class="form-control" id ="statusPay" 
+          [(ngModel)] = "transaction.statusPay" name ="statusPay"> -->
   
        </div>
       <div class="form-group">
         
          <label> StatusType </label>
-          <input type="text" class="form-control" id ="statusType"
-          [(ngModel)] = "transaction.statusType" name ="statusType">
+         <select class="form-control" (change)="onChangeStatus($event)">
+          <option value= ''> choiceTrans </option>
+           <option *ngFor="let item of typeTrans | keyvalue " value="{{item.value}}">{{item.value}}</option> 
+        </select> 
+          <!-- <input type="text" class="form-control" id ="statusType"
+          [(ngModel)] = "transaction.statusType" name ="statusType"> -->
    
        </div>
        <div class="form-group">
@@ -32,16 +41,17 @@
           </div>
 
       <div class="form-group">
-          <!-- <label> Employes </label>
-          <select name="pets" id="pet-select">
-          <option value="">listes des employes inscrits</option>
-          <option value="transaction.fullName"></option>    
-      </select> -->
-         <input type="text" class="form-control" id ="employes"
-          [(ngModel)] = "transaction.employes.idEmployes"  name ="employes"> 
+        <label> Employes </label>
+        <select class="form-control" id="idEmployes"
+        (change)="onChange($event)">
+         <option value= 1> selectEmployes</option>
+          <option *ngFor="let item of empList" value="{{item.idEmployes}}"> {{item.lastName}} {{item.firstName}}</option>    
+      </select> 
+        <!--  <input type="text" class="form-control" id ="employes"
+          [(ngModel)] = "transaction.employes.idEmployes"  name ="employes">  --> 
       </div>
   
-      <button class = "btn btn-success  mt-2" type = "submit"  >  Submit </button>
+      <button class = "btn btn-success  mt-2" type= "submit">  Submit </button>
   
    </form>
   

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Transaction } from 'src/app/model/transaction';
 import { TransactionService } from 'src/app/service/transaction.service';
 
@@ -12,7 +12,9 @@ export class TransDetailsComponent implements OnInit {
   id: number=1;
   transaction: Transaction= new Transaction();
   
-  constructor( private route: ActivatedRoute , private transactionService: TransactionService) { }
+  constructor( private route: ActivatedRoute ,
+     private transactionService: TransactionService,
+     private router:Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -22,6 +24,10 @@ export class TransDetailsComponent implements OnInit {
       
 
     });
+  }
+  retourTrans(id:number){
+    this.router.navigate(['transaction']);
+
   }
   
 }

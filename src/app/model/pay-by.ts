@@ -1,5 +1,5 @@
 export enum PayBy {
-    virement,
-    transfere,
-    cache
+    virement='virement',
+    transfere='transfere',
+    cache='cache'
 }

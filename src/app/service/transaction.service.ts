@@ -7,6 +7,7 @@ import { Transaction } from '../model/transaction';
   providedIn: 'root'
 })
 export class TransactionService {
+  [x: string]: any;
 
   transUrl : string;
   

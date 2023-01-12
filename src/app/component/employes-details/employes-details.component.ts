@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterConfigurationFeature, Router } from '@angular/router';
 import { Employes } from 'src/app/model/employes';
 import { EmployesService } from 'src/app/service/employes.service';
 
@@ -12,7 +12,8 @@ export class EmployesDetailsComponent implements OnInit {
   id: number=1;
   employes: Employes=new Employes();
 
-  constructor( private route: ActivatedRoute , private employesService: EmployesService) { }
+  constructor( private route: ActivatedRoute , private employesService: EmployesService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -22,6 +23,10 @@ export class EmployesDetailsComponent implements OnInit {
       
 
     });
+  }
+  retourEmployes(id:number){
+    this.router.navigate(['employes']);
+
   }
 
 }

@@ -1,13 +1,13 @@
 export class Employes {
     [x: string]: any;
 
-    idEmployes: number = 0 ;
+    idEmployes: number = 1 ;
     firstName: string='';
     lastName: string='';
     adress: string=''; 
     email: string='';
-    cni:number= 0;
-    phoneNumber: number=0
+    cni:number= 1;
+    phoneNumber: number=770000000
     postOccupe: string='';
 
 }

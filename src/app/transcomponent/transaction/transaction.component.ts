@@ -28,7 +28,7 @@ export class TransactionComponent implements OnInit {
       });
   
      }
-     newTransaction(id: number){
+     newTransaction(){
       this.router.navigate(['new-transaction']);
   
     }   

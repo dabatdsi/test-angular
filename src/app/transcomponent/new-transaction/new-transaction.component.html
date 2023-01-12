@@ -2,12 +2,12 @@
 <div class="col-md-6 offset md-3">
     <h3> nouvelle  Transaction </h3>
     <form (ngSubmit) = "onSubmit()">
-      <div class="form-group">
+      <!-- <div class="form-group">
           <label> DatePayment</label>
-          <input type="datetime" class="form-control" id ="datePayment" 
+          <input type="datetime" disabled class="form-control" id ="datePayment" 
           [(ngModel)] = "transaction.datePayment" name ="datePayment">
   
-      </div>
+      </div> -->
       <div class="form-group">
           <label> Moyen_Payment </label>
           <select class="form-control" (change)="onChangePay($event)">

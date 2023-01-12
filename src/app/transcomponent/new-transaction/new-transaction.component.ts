@@ -68,14 +68,22 @@ export class NewTransactionComponent implements OnInit {
 }
 
 onChange(event: any){
- console.log(event.target.value);
+  console.log(event.target.value);
+  this.transaction.idEmployes = event.target.value;
+  console.log(this.transaction.idEmployes)
+ 
 }
 onChangeStatus(event:any){
   console.log(event.target.value);
+  this.transaction.statusType = event.target.value;
+  console.log(this.transaction.statusType)
+
 
 }
 onChangePay(event:any){
   console.log(event.target.value);
+  this.transaction.statusPay = event.target.value;
+  console.log(this.transaction.statusPay)
 
 }
 

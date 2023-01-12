@@ -3,12 +3,13 @@ import { PayBy } from "./pay-by";
 import { TypeTrans } from "./type-trans";
 
 export class Transaction {
-    idTrans: number =2;
+    idTrans !: number ;
     datePayment: Date=new Date();
-    statusPay :PayBy=PayBy.cache;
-    statusType:TypeTrans= TypeTrans.decaissement;
+    statusPay !:PayBy;
+    statusType!:TypeTrans;
     description: string=''; 
-    montant: number=0;
+    montant!: number;
     employes:Employes=new Employes;
+    idEmployes!:number;
     dataForm: any;
 }

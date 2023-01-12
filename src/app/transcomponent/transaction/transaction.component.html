@@ -1,6 +1,7 @@
 <app-header></app-header>
+
 <h1 class="text-center"> liste des transactions</h1>
- 
+<button (click)="newTransaction()" class ="btn-sm btn-infos btn-primary me-2"> Nouvelle_Trans</button> 
 <table class="table table-success table-striped col-12S">
   <thead>
     <tr>
@@ -12,7 +13,6 @@
       <th scope="col"> Montant</th>
       <th scope="col">Employes</th>
       <th scope="col"> Action </th>
-
     </tr>
 
   </thead>
@@ -27,12 +27,11 @@
       <td>{{transaction.employes.lastName}} {{transaction.employes.firstName}}</td>
       <td>
         <div class="btn-group-lg">
-          <button (click)="newTransaction(transaction.idTrans)" class ="btn-sm btn-infos btn-primary me-2"> Nouvelle_Trans</button> 
           <button (click)="transDetails(transaction.idTrans)" class =" btn-sm  btn-infos btn-primary me-2"> Details </button>
-          
         </div> 
       </td>
     
+ 
     </tr>
   </tbody>
 </table>
